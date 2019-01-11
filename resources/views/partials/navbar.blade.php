@@ -55,6 +55,7 @@
             </div>
         </li>
     </ul>
+    <li><a href="{{route('reclamos.create')}}" class="white-text">Agregar Reclamo</a></li>
     <li><a href="#" class="white-text">Categorias</a></li>
     <li><a href="#" class="white-text">Usuarios</a></li>
 </div>
