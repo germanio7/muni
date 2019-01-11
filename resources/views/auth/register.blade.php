@@ -1,7 +1,76 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Villa Ángela || Atención al Vecino</title>
+    <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+</head>
+<body>
 
-@section('content')
-<div class="container">
+    <div class="row center">
+        <h4>Registrarse</h4>
+        <br>
+        <form method="POST" action="{{ route('register') }}" class="col s12">
+        @csrf
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="email" id="mail" class="validate">
+                    <label for="mail">Correo Electronico</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="password" name="pass" id="pass" class="validate">
+                    <label for="pass">Contraseña</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="name" id="name" class="validate">
+                    <label for="name">Nombre</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="telefono" id="telefono" class="validate">
+                    <label for="telefono">CEL/TEL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="direccion" id="direccion" class="validate">
+                    <label for="direccion">Dirección</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="cuil" id="cuil" class="validate">
+                    <label for="cuil">CUIL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s9 push-m4 push-s1">
+                    <input type="text" name="cliente" id="cliente" class="validate">
+                    <label for="cliente">N° de Cliente</label>
+                </div>
+            </div>
+            <div class="row center">
+                <div class="col s12 m4 push-m4">
+                    <button class="btn waves-effect green" type="submit">Registrarse</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="{{asset('/js/app.js')}}"></script>
+    <script>
+		M.AutoInit();
+	</script>
+</body>
+</html>
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -73,5 +142,4 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> -->
