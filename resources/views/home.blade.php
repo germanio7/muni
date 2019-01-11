@@ -1,14 +1,23 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Villa Ángela || Atención al Vecino</title>
+  <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+</head>
+<body class="scrollbar">
 
-@section('content')
-<div class="container">
-        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-        @endif
+    @include('partials.navbar')
 
-        <example-component></example-component>
-    
-</div>
-@endsection
+    <div id="content">
+		  @yield('contenido')
+    </div>
+  
+    <script src="{{asset('/js/app.js')}}"></script>
+    <script>
+		M.AutoInit();
+	</script>
+</body>
+</html>
